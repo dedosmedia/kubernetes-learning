@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: busybox
+  namespace: hola-app
 spec:
   replicas: 1
   selector: 
@@ -19,4 +20,3 @@ spec:
           - sleep
           - "3600"
         imagePullPolicy: IfNotPresent
-        
